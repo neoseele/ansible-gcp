@@ -1,0 +1,9 @@
+---
+- hosts: tag_ansible-test
+  remote_user: nmiu
+  become: yes
+  become_method: sudo
+  tasks:
+    - user:
+        name: root
+        password: "{{ rootpw }}"
